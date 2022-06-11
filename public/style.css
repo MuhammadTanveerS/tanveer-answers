@@ -1,0 +1,187 @@
+body {
+    background-color: #F2F2F2;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Monoton', cursive;
+    display: inline;
+    margin-top: 4rem;
+}
+
+.logo-img{
+    width: 7rem;
+}
+
+p {
+  font-family: 'Oleo Script', cursive;
+}
+
+.header {
+    height: 40vh;
+    background: linear-gradient(253deg, #764AF1, #9772FB, #F32424);
+    background-size: 300% 300%;
+    -webkit-animation: Background 25s ease infinite;
+    -moz-animation: Background 25s ease infinite;
+    animation: Background 25s ease infinite;
+}
+
+@-webkit-keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Background {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  .full{
+    background: url(https://i.imgur.com/wCG2csZ.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tInput {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #764AF1;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #F32424;
+    outline: none;
+    background: transparent;
+  }
+
+  .askBtn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #F32424;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+  }
+
+  .askBtn:hover{
+    background: #F32424;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #F32424,
+                0 0 15px #F32424,
+                0 0 35px #F32424,
+                0 0 50px #F32424;
+    
+  }
+
+  .askBtn span {
+    position: absolute;
+    display: block;
+  }
+
+  .askBtn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #F32424);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .askBtn span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #F32424);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .askBtn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #F32424);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .askBtn span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #F32424);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
