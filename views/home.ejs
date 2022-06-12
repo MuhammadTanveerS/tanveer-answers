@@ -34,20 +34,38 @@
     </div>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-6 mx-auto d-flex flex-column align-content-center justify-content-center">
-                <form action="/" method="post">
-                <input class="tInput" type="text" id="petition" name="petition" placeholder="Patition" oninput="updateInput(this.value)"> 
-                <input class="tInput" type="text" id="question" name="question" placeholder="Question">
-                <input class="disableInput" type="text" id="answer" name="answer" style="display: none;">
-                <br>
-                <button class="askBtn" onclick="submitQuestion()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    CLICK ME
-                </button>
-                </form>
+            <div class="col-6 mx-auto d-flex flex-column align-content-center justify-content-center align-items-center">
+                <% if (locals.answer) { %>
+                    <div class="mx-auto d-flex flex-column justify-content-center align-content-center">
+                        <h2 class="text-center" style="font-family: 'Monoton', cursive;">Tanveer Answers: </h2>
+                        <h2 class="text-center" ><%= answer %></h2>
+                        <form action="/" method="get">
+                            <button class="askBtn w-100">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                NEW QUESTION
+                            </button>
+                        </form>
+                    </div>
+                    
+                <% } else { %>
+                    <form action="/" method="post">
+                        <input class="tInput" type="text" id="petition" name="petition" placeholder="Patition" oninput="updateInput(this.value)"> 
+                        <input class="tInput" type="text" id="question" name="question" placeholder="Question" >
+                        <input class="disableInput" type="text" id="answer" name="answer" style="display: none;">
+                        <br>
+                        <button class="askBtn" onclick="submitQuestion()" style="float: right;">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            ASK ME
+                        </button>
+                        </form>
+                <% } %>
+                
             </div>
         </div>
     </div>
